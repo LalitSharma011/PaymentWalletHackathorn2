@@ -1,0 +1,16 @@
+.user-carosuel{
+
+    height: 55vh;
+    margin-top: 19.5vh;
+   
+}
+h5{
+    color: black;
+}
+.card-text{
+    color: black;
+    text-align: center;
+}
+.card-body{
+    background-color: rgb(219, 226, 226) 
+}

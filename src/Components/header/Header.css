@@ -1,0 +1,28 @@
+.user-navbar{
+    background-color: #271745;
+    /* height: 20vh; */
+ }
+
+.usermenucolor a{
+    color: white !important;
+}
+
+.usermenucolor a:hover{
+    font-weight: bold;
+    
+}
+#user-details-on-header{
+    background-color:#271745;
+    color: white !important;
+}
+.user-logout{
+    background-color:#271745;
+    color: black !important;
+
+}
+.user-logout:hover{
+    /* background-color:white; */
+    background-color:#271745;
+    color: white !important;
+
+}
