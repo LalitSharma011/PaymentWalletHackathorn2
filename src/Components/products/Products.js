@@ -1,4 +1,10 @@
 import React from 'react'
+import MediaCard1 from './Material1'
+import MediaCard2 from './Material2'
+import MediaCard3 from './Material3'
+import MediaCard4 from './Material4'
+import MediaCard5 from './Material5'
+import MediaCard6 from './Material6'
 import './Products.css'
 
 export default function Products() {
@@ -51,7 +57,33 @@ export default function Products() {
 {/* carosuel ends here */}
 
 {/* responsive cards starts */}
-            <div class="container">
+
+             <div className="container">
+                <div className="row">
+                    <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard1/>
+             </div>
+             <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard2/>
+             </div>
+             <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard3/>
+             </div>
+             <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard4/>
+             </div>
+             <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard5/>
+             </div>
+             <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
+             <MediaCard6/>
+             </div>
+             </div>
+             </div>
+
+
+
+            {/* <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 my-4">
                         <div class="card text-center">
@@ -178,7 +210,7 @@ export default function Products() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* responsive cards ends */}
         </div>
     )
