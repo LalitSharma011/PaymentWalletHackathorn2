@@ -1,0 +1,19 @@
+{
+  "register": [
+    {
+      "email": "Parker@gmail.com",
+      "password": "1234567890",
+      "id": 1
+    },
+    {
+      "email": "clarke@ca.com",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "email": "clarke@ca.com",
+      "password": "12345678",
+      "id": 3
+    }
+  ]
+}

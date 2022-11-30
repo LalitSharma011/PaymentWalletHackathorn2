@@ -1,6 +1,7 @@
 import React from 'react';
 import './Forgetpassword.css'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Forgetpassword() {
@@ -8,6 +9,8 @@ export default function Forgetpassword() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmPassword] = useState('')
+
+    const navigate = useNavigate();
 
     // vallidation used
     const PasswordHandeller = () => {
@@ -60,6 +63,7 @@ export default function Forgetpassword() {
                         }
                         else {
                             document.getElementById("msg").innerHTML = "Password Updated Successfully !";
+                            //navigate("/");
                         }
                     })
                     .catch(err => console.error(err))
