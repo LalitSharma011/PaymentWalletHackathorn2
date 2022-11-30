@@ -37,7 +37,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {                 // 1
 export default function SignUp() {
 
   const [open, setOpen] = React.useState(false);   //2 added for snack bars
-  const handleClick = () => {}
+  const handleClick = () => { }
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -71,19 +71,19 @@ export default function SignUp() {
         .then(data => {
           console.log(data)
           console.log(data.message)
-        // 3 for snackbar
-        if (data.status === 200) {
-          navigate("/")
-          // alert("You have Successfully registered")
-        }
-        else {
-          setOpen(true)
-        }
+          // 3 for snackbar
+          if (data.status === 200) {
+            navigate("/")
+            // alert("You have Successfully registered")
+          }
+          else {
+            setOpen(true)
+          }
 
         })
         .catch((e) => console.log("Catch block executed"))
         .finally(console.log("Finally executed"))
-            
+
 
     },
     validationSchema: yup.object().shape({
@@ -99,7 +99,7 @@ export default function SignUp() {
         .matches(/^[a-zA-Z.]{2,}$/, "Please enter valid Last Name")
         .required("lastname cannot be left blank"),
 
-        email: yup.string()
+      email: yup.string()
         .email("Invalid email address")
         .required("Email cannot be left blank"),
 
@@ -133,11 +133,16 @@ export default function SignUp() {
     })
   })
 
+  const handleChange = (e) => {
+    e.preventDefault();
+  };
+
+
   return (
     <div className="container">
       <div className="row">
-        <div className="col-12 col-md-6 user-card"> 
-        <ActionAreaCard/>         
+        <div className="col-12 col-md-6 user-card">
+          <ActionAreaCard />
         </div>
         <div className="col-12 col-md-6">
           <ThemeProvider theme={theme}>
@@ -259,6 +264,9 @@ export default function SignUp() {
                           label="New Password"
                           type="password"
                           id="password"
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+
 
                         />
                         {formik.errors.password && formik.touched.password ? <span className='text-danger'>{formik.errors.password}</span> : null}
@@ -273,6 +281,9 @@ export default function SignUp() {
                           label="Confirm Password"
                           type="password"
                           id="confirmpassword"
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+
 
                         />
                         {formik.errors.confirmpassword && formik.touched.confirmpassword ? <span className='text-danger'>{formik.errors.confirmpassword}</span> : null}
@@ -288,22 +299,22 @@ export default function SignUp() {
 
                     <Stack spacing={2} sx={{ width: '100%' }}>
 
-                    <Button className='user-button1'
-                      type="submit"
-                      fullWidth
-                      variant="contained"
-                      sx={{ mt: 0, mb: 1}}
+                      <Button className='user-button1'
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        sx={{ mt: 0, mb: 1 }}
 
-                    //   sx={{ mt: 3, mb: 2 }} onClick={() => customMe()}
-                    >
-                      Sign Up
-                    </Button>
-                    <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={open} autoHideDuration={3000} onClose={handleClose}>
-                      <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
-                        Email address already exist !!
-                      </Alert>
-                    </Snackbar>
-                  </Stack>
+                      //   sx={{ mt: 3, mb: 2 }} onClick={() => customMe()}
+                      >
+                        Sign Up
+                      </Button>
+                      <Snackbar anchorOrigin={{ vertical: 'top', horizontal: 'center' }} open={open} autoHideDuration={3000} onClose={handleClose}>
+                        <Alert onClose={handleClose} severity="error" sx={{ width: '100%' }}>
+                          Email address already exist !!
+                        </Alert>
+                      </Snackbar>
+                    </Stack>
                     <Grid container justifyContent="flex-start">
                       <Grid item>
                         <h6>Already have an account? <a href="/" variant="body2">Login here</a></h6>
