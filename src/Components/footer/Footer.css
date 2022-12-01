@@ -43,12 +43,39 @@
     color:white;
 }
 .socials a i{
-    font-size: 1.1rem;
+    font-size: 2rem;
     transition: color .4s ease;
 }
-.socials a:hover i{
+/* .socials a:hover i{
     color: aqua;
+} */
+#userfa a:hover{
+
+    color: #38529A;
 }
+#usertw a:hover{
+
+    color:#2AA3D9;
+}
+#usergo a:hover{
+
+    color:#F3B605;
+}
+#userli a:hover{
+
+    color: #0A63BC;
+}
+#useryt a:hover{
+
+    color: red;
+}
+#userwa a:hover{
+
+    color: #3FE05C;
+}
+
+
+
 
 .footer-bottom{
     background-color:gray;
