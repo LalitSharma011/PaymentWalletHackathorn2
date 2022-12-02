@@ -123,6 +123,8 @@ export default function SignInSide() {
                   label="Email your Email"
                   name="email"
                   autoFocus
+                  onCopy={handleChange}
+                  onPaste={handleChange}
                 />
                 {formik.errors.email && formik.touched.email ? <span className='text-danger'>{formik.errors.email}</span> : null}
                 <TextField

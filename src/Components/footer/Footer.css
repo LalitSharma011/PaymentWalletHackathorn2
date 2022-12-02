@@ -67,7 +67,7 @@
 }
 #useryt a:hover{
 
-    color: red;
+    color: #F70000;
 }
 #userwa a:hover{
 
@@ -78,7 +78,7 @@
 
 
 .footer-bottom{
-    background-color:gray;
+    background-color:#271745;
     width: 100%;
     padding: 5px;
     color: white;

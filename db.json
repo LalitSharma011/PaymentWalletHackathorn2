@@ -2,7 +2,7 @@
   "register": [
     {
       "email": "Parker@gmail.com",
-      "password": "1234567890",
+      "password": "11111111",
       "id": 1
     },
     {
@@ -11,8 +11,8 @@
       "id": 2
     },
     {
-      "email": "clarke@ca.com",
-      "password": "12345678",
+      "email": "Dipin@gmail.com",
+      "password": "1234567",
       "id": 3
     }
   ]
