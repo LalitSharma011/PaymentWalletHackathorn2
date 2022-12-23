@@ -1,19 +1,15 @@
 import React from 'react'
+import UserCarosuel from './Carosuel'
 import MediaCard1 from './Material1'
-import MediaCard2 from './Material2'
-import MediaCard3 from './Material3'
-import MediaCard4 from './Material4'
-import MediaCard5 from './Material5'
-import MediaCard6 from './Material6'
 import './Products.css'
 
 export default function Products() {
     return (
         <div>
             {/* carosuel srarts */}
-            <br />
-            <div className="container">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div className="container usermargin">
+                                
+            {/* <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -52,7 +48,8 @@ export default function Products() {
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>                
-               </div>
+               </div> */}
+               
             </div>
 {/* carosuel ends here */}
 
@@ -61,22 +58,22 @@ export default function Products() {
              <div className="container">
                 <div className="row">
                     <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard1/>
+            <MediaCard1/>
              </div>
              <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard2/>
+             {/* <MediaCard2/> */}
              </div>
              <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard3/>
+             {/* <MediaCard3/> */}
              </div>
              <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard4/>
+             {/* <MediaCard4/> */}
              </div>
              <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard5/>
+             {/* <MediaCard5/> */}
              </div>
              <div className="col-12 col-sm-9 col-md-8 col-lg-4 my-4">
-             <MediaCard6/>
+             {/* <MediaCard6/> */}
              </div>
              </div>
              </div>

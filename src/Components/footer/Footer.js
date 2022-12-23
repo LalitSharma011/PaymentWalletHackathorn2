@@ -4,7 +4,7 @@ import './Footer.css'
 
 export default function Footer() {
   return (
-    <div>
+    <div className='mt-4'>
     <div class="footer-content text-center footer">
             <ul class="socials">
                 <li id="userfa"><a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjY4NzkwMTIzLCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><i class="fa-brands fa-square-facebook"></i></a></li>

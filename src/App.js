@@ -8,6 +8,7 @@ import Forgetpassword from './Components/forgetpassword/Forgetpassword';
 import ButtonBases from './Components/aboutus/Materialabout';
 import CustomizedAccordions from './Components/contactus/Materialcontact';
 import Products from './Components/products/Products';
+import MediaCard1 from './Components/products/Material1';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
      <Route path="/forgetpassword" element={<Forgetpassword/>} />
      <Route path="/aboutus" element={<ButtonBases />} />
      <Route path="/contactus" element={<CustomizedAccordions/>} />
-     <Route path="/products" element={<Products />} />
+     <Route path="/products" element={<MediaCard1 />} />
      </Routes>
      <Footer/>
      </BrowserRouter>     

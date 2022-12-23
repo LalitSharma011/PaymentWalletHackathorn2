@@ -7,29 +7,101 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { textAlign } from '@mui/system';
 import { Link } from 'react-router-dom';
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBCardTitle,
+  MDBCardText,
+  MDBCardImage,
+  MDBBtn
+} from 'mdb-react-ui-kit';
 import './Products.css'
+import UserCarosuel from './Carosuel';
 
 
 export default function MediaCard1() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="200"
-        image="/assets/service1.jpg"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div" style={{textAlign:'center'}}>
-        Need Medicines ?
-        </Typography>
-        <Typography variant="body2" color="text.secondary" style={{textAlign:'center'}}>
-        Get Original medicines on best prices.
-        </Typography>
-      </CardContent>
-      <CardActions>
-      <a href="https://www.netmeds.com/healthstore?source_attribution=ADW-CPC-Search-PY-Generic&utm_source=ADW-CPC-Search-PY-Generic&utm_medium=CPC&utm_campaign=ADW-CPC-Search-PY-Generic&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jGxH74RDPBwUn9m5MgNv9vGGiE6M24qn32xUm0C1_6SJGZPWPysdtMaAuGlEALw_wcB" >Visit Site</a>
-      </CardActions>
-    </Card>
-  );
+    <div className="container usermargin">
+      <UserCarosuel/>
+        <div className="row">
+            <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service1.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Buy Medicines</MDBCardTitle>
+        <MDBCardText>
+          Buy Genuine Medicines.
+        </MDBCardText>
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+
+    <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service2.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Buy Movie Tickets</MDBCardTitle>
+        <MDBCardText>
+          Buy Latest Movie Tickets
+        </MDBCardText>
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+
+    <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service3.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Pay Education Fees</MDBCardTitle>
+        <MDBCardText>
+          Pay Education Fees.
+        </MDBCardText>
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+
+    <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service4.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Mobile Recharge</MDBCardTitle>
+        <MDBCardText>
+          Recharge Your Mobile
+        </MDBCardText>
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+
+    <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service5.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Credit Card Bill</MDBCardTitle>
+        <MDBCardText>
+          Pay your Credit Card Bill
+        </MDBCardText>
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+
+    <div className="col-12 col-md-6 col-lg-4 ho mt-3">
+    <MDBCard alignment='center'>
+      <MDBCardImage src='/assets/service6.jpg' className='user-height' position='top' alt='...' />
+      <MDBCardBody>
+        <MDBCardTitle>Car Insaurance</MDBCardTitle>
+        <MDBCardText>
+          Get your Car Insured
+        </MDBCardText >
+        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+      </MDBCardBody>
+    </MDBCard>
+    </div>
+    </div>
+    </div>
+      );
 }
