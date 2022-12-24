@@ -17,12 +17,14 @@ import {
 } from 'mdb-react-ui-kit';
 import './Products.css'
 import UserCarosuel from './Carosuel';
+import Spinner from '../spinner/Spinner';
 
 
 export default function MediaCard1() {
-  return (
-    <div className="container usermargin">
+  return (    
+    <div className="container usermargin">      
       <UserCarosuel/>
+      {/* <Spinner/> */}
         <div className="row">
             <div className="col-12 col-md-6 col-lg-4 ho mt-3">
     <MDBCard alignment='center' className='paper'>

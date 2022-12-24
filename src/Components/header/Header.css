@@ -44,6 +44,11 @@
 }
 .hov:hover {
     font-weight: bold;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    transition: all 0.4s ease !important;
+    
 }
 .user-login-color{
       background-color: #009FAC!important;     

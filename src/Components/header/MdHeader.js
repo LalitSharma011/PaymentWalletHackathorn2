@@ -42,19 +42,17 @@ export default function MdHeader() {
               <a href='/aboutus' className='user-navcolor hov'>About Us</a>
               </MDBBreadcrumbItem>
               </> :
-
                                     <>
                                         <li class="nav-item">
-                                            <Link class="nav-link active" to="/registration">SignUp</Link>
+                                            <Link class="nav-link active user-navcolor hov" to="/registration">SignUp</Link>
                                         </li>
 
                                         <li class="nav-item">
-                                            <Link class="nav-link active" to="/">Login</Link>
+                                            <Link class="nav-link active user-navcolor hov" to="/">Login</Link>
                                         </li>
-
                                     </>
                             }
-                        
+           
                     </MDBBreadcrumb>
                 </nav>
                 {localStorage.getItem('jwt_token') ?
