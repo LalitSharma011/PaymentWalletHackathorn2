@@ -9,12 +9,13 @@ import ButtonBases from './Components/aboutus/Materialabout';
 import CustomizedAccordions from './Components/contactus/Materialcontact';
 import Products from './Components/products/Products';
 import MediaCard1 from './Components/products/Material1';
+import MdHeader from './Components/header/MdHeader';
 
 function App() {
   return (
     <div>
      <BrowserRouter>
-     <Header/>
+     <MdHeader/>
      <Routes>
      <Route path="/" element={<SignInSide />}/>
      <Route path="/registration" element={<SignUp />} />

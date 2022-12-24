@@ -22,7 +22,32 @@
 }
 .user-logout:hover{
     /* background-color:white; */
-    background-color:#271745;
-    color: white !important;
+    background-color:#271745!important;
+    color: white!important;
+    border-radius: 5px;
+    font-weight: bold;
+    
 
+}
+
+.user-height img{
+
+    height: 8vh!important;
+    
+}
+.user-color{
+    background-color:#271745;
+}
+.user-navcolor{
+
+    color: white!important;
+}
+.hov:hover {
+    font-weight: bold;
+}
+.user-login-color{
+      background-color: #009FAC!important;     
+}
+.user-login-color:hover{
+    background-color: #E74260!important;
 }

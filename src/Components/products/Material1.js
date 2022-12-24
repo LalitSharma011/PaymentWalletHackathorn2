@@ -25,7 +25,7 @@ export default function MediaCard1() {
       <UserCarosuel/>
         <div className="row">
             <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center' className='paper'>
       <MDBCardImage src='/assets/service1.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Buy Medicines</MDBCardTitle>
@@ -38,7 +38,7 @@ export default function MediaCard1() {
     </div>
 
     <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center' className='paper'>
       <MDBCardImage src='/assets/service2.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Buy Movie Tickets</MDBCardTitle>
@@ -51,20 +51,20 @@ export default function MediaCard1() {
     </div>
 
     <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center' className='paper'>
       <MDBCardImage src='/assets/service3.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Pay Education Fees</MDBCardTitle>
         <MDBCardText>
           Pay Education Fees.
         </MDBCardText>
-        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+        <MDBBtn href='#' className='user-Button'>Pay Now</MDBBtn>
       </MDBCardBody>
     </MDBCard>
     </div>
 
     <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center' className='paper'>
       <MDBCardImage src='/assets/service4.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Mobile Recharge</MDBCardTitle>
@@ -77,20 +77,20 @@ export default function MediaCard1() {
     </div>
 
     <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center' className='paper'>
       <MDBCardImage src='/assets/service5.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Credit Card Bill</MDBCardTitle>
         <MDBCardText>
           Pay your Credit Card Bill
         </MDBCardText>
-        <MDBBtn href='#' className='user-Button'>Buy Now</MDBBtn>
+        <MDBBtn href='#' className='user-Button'>Pay Now</MDBBtn>
       </MDBCardBody>
     </MDBCard>
     </div>
 
     <div className="col-12 col-md-6 col-lg-4 ho mt-3">
-    <MDBCard alignment='center'>
+    <MDBCard alignment='center'className='paper'>
       <MDBCardImage src='/assets/service6.jpg' className='user-height' position='top' alt='...' />
       <MDBCardBody>
         <MDBCardTitle>Car Insaurance</MDBCardTitle>
