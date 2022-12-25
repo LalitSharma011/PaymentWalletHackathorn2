@@ -44,11 +44,11 @@ export default function MdHeader() {
               </> :
                                     <>
                                         <li class="nav-item">
-                                            <Link class="nav-link active user-navcolor hov" to="/registration">SignUp</Link>
+                                            <Link class="nav-link user-navcolor hov" to="/registration">SignUp</Link>
                                         </li>
 
                                         <li class="nav-item">
-                                            <Link class="nav-link active user-navcolor hov" to="/">Login</Link>
+                                            <Link class="nav-link user-navcolor hov" to="/">Login</Link>
                                         </li>
                                     </>
                             }

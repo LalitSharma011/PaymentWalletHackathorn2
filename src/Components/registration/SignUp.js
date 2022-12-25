@@ -18,12 +18,20 @@ import { useFormik } from 'formik'
 import * as yup from 'yup'
 import './Registration.css'
 import ActionAreaCard from './Signupimage';
+import FormControl from "@mui/material/FormControl";
 // import CustomizedSnackbars from '../SnackBar/Snackbar';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
-import { InputAdornment, OutlinedInput } from '@mui/material';
+import InputAdornment from "@mui/material/InputAdornment";
+import InputLabel from "@mui/material/InputLabel";
+import IconButton from "@mui/material/IconButton";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+
+
 
 
 const theme = createTheme();
@@ -35,6 +43,44 @@ const Alert = React.forwardRef(function Alert(props, ref) {                 // 1
 
 
 export default function SignUp() {
+
+  const [values, setValues] = React.useState({        //for password show field
+    password: "",
+    showPassword: false
+  });
+
+  const handleChange1 = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword
+    });
+  };
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
+  const [values2, setValues2] = React.useState({        //for confirm password show field
+    confirmpassword: "",
+    showConfirmPassword: false
+  });
+
+  const handleChange2 = (prop) => (event) => {
+    setValues2({ ...values2, [prop]: event.target.value });
+  };
+
+  const handleClickShowPassword2 = () => {
+    setValues2({
+      ...values2,
+      showConfirmPassword: !values2.showConfirmPassword
+    });
+  };
+  const handleMouseDownPassword2 = (event) => {
+    event.preventDefault();
+  };
 
   const [open, setOpen] = React.useState(false);   //2 added for snack bars
   const handleClick = () => { }
@@ -256,7 +302,7 @@ export default function SignUp() {
                       </Grid>
 
                       <Grid item xs={12}>
-                        <TextField
+                        {/* <TextField
                           onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.password}
                           required
                           fullWidth
@@ -266,14 +312,44 @@ export default function SignUp() {
                           id="password"
                           onCopy={handleChange}
                           onPaste={handleChange}
+                       /> */}
 
+                       <FormControl sx={{ mt: 1, width: '45ch' }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur}
+                        value={formik.values.password}>
+                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                        <OutlinedInput
+                          id="password"
+                          required
+                          fullWidth
 
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+                          type={values.showPassword ? "text" : "password"}
+                          value={values.password}
+                          onChange={handleChange1("password")}
+                          endAdornment={
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                                onMouseDown={handleMouseDownPassword}
+                                edge="end"
+                              // margin="normal"
+                              // fullWidth
+                              >
+                                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                              </IconButton>
+                            </InputAdornment>
+                          }
+                          label="Password"
                         />
+                      </FormControl>
+
                         {formik.errors.password && formik.touched.password ? <span className='text-danger'>{formik.errors.password}</span> : null}
                       </Grid>
 
                       <Grid item xs={12}>
-                        <TextField
+                        {/* <TextField
                           onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmpassword}
                           required
                           fullWidth
@@ -285,7 +361,37 @@ export default function SignUp() {
                           onPaste={handleChange}
 
 
+                        /> */}
+                        <FormControl sx={{ mt: 1, width: '45ch' }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmpassword}>
+                        <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
+                        <OutlinedInput
+                          id="confirmpassword"
+                          required
+                          fullWidth
+
+                          onCopy={handleChange}
+                          onPaste={handleChange}
+                          type={values2.showConfirmPassword ? "text" : "password"}
+                          value={values2.confirmpassword}
+                          onChange={handleChange2("confirmpassword")}   //doubt
+                          endAdornment={
+                            <InputAdornment position="end">
+                              <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword2}
+                                onMouseDown={handleMouseDownPassword2}
+                                edge="end"
+                              // margin="normal"
+                              // fullWidth
+                              >
+                                {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                              </IconButton>
+                            </InputAdornment>
+                          }
+                          label="Confirm Password"
                         />
+                      </FormControl>
+
                         {formik.errors.confirmpassword && formik.touched.confirmpassword ? <span className='text-danger'>{formik.errors.confirmpassword}</span> : null}
                       </Grid>
 
