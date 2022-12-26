@@ -12,6 +12,7 @@ import MediaCard1 from './Components/products/Material1';
 import MdHeader from './Components/header/MdHeader';
 import MaterialHeader from './Components/header/MaterialHeader';
 import MDLogin from './Components/login/MDLogin';
+import MdbFooter from './Components/footer/MdbFooter';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
      <Route path="/contactus" element={<CustomizedAccordions/>} />
      <Route path="/products" element={<MediaCard1 />} />
      </Routes>
-     <Footer/>
+     <MdbFooter/>
+     {/* <Footer/> */}
      </BrowserRouter>     
     </div>
   );

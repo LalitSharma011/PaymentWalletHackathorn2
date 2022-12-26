@@ -16,7 +16,7 @@ export default function Footer() {
             </ul>
         </div>
         <div class="footer-bottom">
-            <p>copywright &copy;2022 Natwest. Designed by Lalit</p>
+            <p>copywright &copy;2022 Natwest. Designed by Lalit Sharma</p>
         </div>
     </div>
   )
