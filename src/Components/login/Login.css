@@ -8,14 +8,30 @@
     color: white;
     border-radius: 4px;
     font-weight: bold!important;  
-    
+        
     
 }
 
 .user-button:hover{
     background: white!important;
     border: 1px solid;
-    color: black;
+    color: black!important;
 }
 
+.paper{
+    padding: 1em;
+    background-color: white;
+    box-shadow: 5px 5px 20px grey;
+    /* text-align: center; */
+}
 
+.user-login-text{
+    text-align: center;
+}
+.user-margin
+{
+    margin-top: 20vh;
+}
+.user-image{
+    height: 49vh;
+}

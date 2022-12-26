@@ -314,14 +314,13 @@ export default function SignUp() {
                           onPaste={handleChange}
                        /> */}
 
-                       <FormControl sx={{ mt: 1, width: '45ch' }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur}
+                       <FormControl fullWidth sx={{ mt: 1}} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur}
                         value={formik.values.password}>
                         <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                         <OutlinedInput
                           id="password"
-                          required
                           fullWidth
-
+                          required
                           onCopy={handleChange}
                           onPaste={handleChange}
                           type={values.showPassword ? "text" : "password"}
@@ -362,13 +361,12 @@ export default function SignUp() {
 
 
                         /> */}
-                        <FormControl sx={{ mt: 1, width: '45ch' }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmpassword}>
+                        <FormControl fullWidth sx={{ mt: 1}} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur} value={formik.values.confirmpassword}>
                         <InputLabel htmlFor="outlined-adornment-password">Confirm Password</InputLabel>
                         <OutlinedInput
                           id="confirmpassword"
                           required
                           fullWidth
-
                           onCopy={handleChange}
                           onPaste={handleChange}
                           type={values2.showConfirmPassword ? "text" : "password"}
@@ -423,7 +421,7 @@ export default function SignUp() {
                     </Stack>
                     <Grid container justifyContent="flex-start">
                       <Grid item>
-                        <h6>Already have an account? <a href="/" variant="body2">Login here</a></h6>
+                        <h6>Already have an account? <Link href="/" variant="body2">Login here</Link></h6>
                       </Grid>
                     </Grid>
                   </Box>

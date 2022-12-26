@@ -25,8 +25,6 @@ import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { WidthNormal } from '@mui/icons-material';
-import LoginImage from './LoginImage';
-
 
 
 const theme = createTheme();
@@ -126,8 +124,7 @@ export default function SignInSide() {
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundPosition: 'center',
           }}         
-        />
-        <LoginImage/>
+        />        
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{

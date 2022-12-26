@@ -29,9 +29,9 @@ export default function MaterialHeader() {
 
   return (
 
-    <MDBNavbar expand='lg' light className='user-color paper' fixed='top'>
+    <MDBNavbar expand='lg' light className='user-color paper fixed-top'>
       <MDBContainer fluid>
-        <Link className="navbar-brand img-fluid user-height" to="/"><img src="./assets/login.png" alt="" />
+        <Link className="navbar-brand img-fluid" to="/"><img src="./assets/login.png" alt="" />
         </Link>
         <MDBNavbarToggler
           type='button'
