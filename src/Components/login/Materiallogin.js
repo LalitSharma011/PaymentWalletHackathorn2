@@ -25,6 +25,7 @@ import FormControl from "@mui/material/FormControl";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { WidthNormal } from '@mui/icons-material';
+import LoginImage from './LoginImage';
 
 
 
@@ -85,8 +86,8 @@ export default function SignInSide() {
           console.log(data.access_token);
 
           if (data.status === 200) {
-            localStorage.setItem("jwt_token", data.access_token)  //use session storage to remove token on closure of browser
-            localStorage.setItem("userName", JSON.stringify(data.userData)) //to get data of user in the state, we can now print user details when they log in
+            sessionStorage.setItem("jwt_token", data.access_token)  //use session storage to remove token on closure of browser
+            sessionStorage.setItem("userName", JSON.stringify(data.userData)) //to get data of user in the state, we can now print user details when they log in
             navigate("/products")
 
           }
@@ -109,24 +110,24 @@ export default function SignInSide() {
     e.preventDefault();
   };
 
-
   return (
-    <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '110vh' }}>
-        <CssBaseline />
+        <ThemeProvider theme={theme}>
+       <Grid container component="main" sx={{ height: '100vh' }}>
+       <CssBaseline />
         <Grid
           item
           xs={false}
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(./assets/login1.png)',
+            // backgroundImage: 'url(./assets/login1.png)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundPosition: 'center',
-          }}
+          }}         
         />
+        <LoginImage/>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -172,15 +173,13 @@ export default function SignInSide() {
 
                 /> */}
 
-
               <FormControl sx={{ mt: 1, width: '56ch' }} variant="outlined" onChange={formik.handleChange} onBlur={formik.handleBlur}
                 value={formik.values.password}>
                 <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                 <OutlinedInput
                   id="password"
                   required
-                  fullWidth
-
+                  // fullWidth
                   onCopy={handleChange}
                   onPaste={handleChange}
                   type={values.showPassword ? "text" : "password"}

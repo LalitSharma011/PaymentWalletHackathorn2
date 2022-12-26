@@ -10,12 +10,14 @@ import CustomizedAccordions from './Components/contactus/Materialcontact';
 import Products from './Components/products/Products';
 import MediaCard1 from './Components/products/Material1';
 import MdHeader from './Components/header/MdHeader';
+import MaterialHeader from './Components/header/MaterialHeader';
 
 function App() {
   return (
     <div>
      <BrowserRouter>
-     <MdHeader/>
+     {/* <MdHeader/> */}
+     <MaterialHeader/>
      <Routes>
      <Route path="/" element={<SignInSide />}/>
      <Route path="/registration" element={<SignUp />} />
