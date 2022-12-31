@@ -49,23 +49,23 @@ export default function MaterialHeader() {
                 <>
 
                   <MDBNavbarItem>
-                    <MDBNavbarLink href='/products' className='nav-link user-navcolor hov ho'>Services</MDBNavbarLink>
+                    <Link to='/products' className='nav-link user-navcolor hov ho'>Services</Link>
                   </MDBNavbarItem>
                   <MDBNavbarItem>
-                    <MDBNavbarLink href='/contactus' className='nav-link user-navcolor hov ho'>Contact Us</MDBNavbarLink>
+                    <Link to='/contactus' className='nav-link user-navcolor hov ho'>Contact Us</Link>
                   </MDBNavbarItem>
                   <MDBNavbarItem>
-                    <MDBNavbarLink href='/aboutus' className='nav-link user-navcolor hov ho'>About Us
-                    </MDBNavbarLink>
+                    <Link to='/aboutus' className='nav-link user-navcolor hov ho'>About Us
+                    </Link>
                   </MDBNavbarItem>
                 </> :
                 <>
                   <li class="nav-item">
-                    <a class="nav-link user-navcolor hov ho" href="/registration">SignUp</a>
+                    <Link class="nav-link user-navcolor hov ho" to="/registration">SignUp</Link>
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link user-navcolor hov ho" href="/">Login</a>
+                    <Link class="nav-link user-navcolor hov ho" to="/">Login</Link>
                   </li>
                 </>
             }
@@ -76,7 +76,7 @@ export default function MaterialHeader() {
                 Welcome: {username.firstname} {username.lastname}
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item user-logout" href="/" onClick={logout}>Logout</a></li>
+                <li><Link class="dropdown-item user-logout" to="/" onClick={logout}>Logout</Link></li>
               </ul>
             </div>
             : null
