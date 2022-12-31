@@ -8,8 +8,22 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import './Footer.css'
+import Timer1 from '../../Timer';
+import { useNavigate } from "react-router-dom";
+// import SignInSide from '../LoginPage/SignInSide';
 
 export default function MdbFooter() {
+
+  const navigate = useNavigate();
+  function logout() {
+    navigate("/")
+    sessionStorage.removeItem('jwt_token');
+  }
+  if (sessionStorage.getItem('jwt_token')) {
+    setTimeout(logout, 60000);
+  }
+
+
   return (
     <MDBFooter className='bg-light text-center text-white'>
       <MDBContainer className='p-4 pb-0'>
@@ -73,14 +87,18 @@ export default function MdbFooter() {
             <MDBIcon fab icon='whatsapp' />
           </MDBBtn>
         </section>
-      </MDBContainer>
-
+        </MDBContainer>
+        
       <div className='text-center p-3' style={{ backgroundColor: '#271745' }}>
-        © 2022 Copyright:
-        <a className='text-white' href='#'>
-          Lalit Sharma
-        </a>
-      </div>
+        © 2022 Copyright: 
+        <a className='text-white' href='#'> Lalit Sharma
+        {sessionStorage.getItem('jwt_token') ?
+            <Timer1/>
+            :null
+          }
+       </a>        
+        </div>
+            
     </MDBFooter>
   );
 }
