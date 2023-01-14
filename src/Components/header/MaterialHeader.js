@@ -16,12 +16,12 @@ import { useNavigate } from "react-router-dom";
 
 export default function MaterialHeader() {
 
-  const username = JSON.parse(sessionStorage.getItem('userName'));
+  const useremail = localStorage.getItem('userName');
   const navigate = useNavigate();
 
   function logout() {
 
-    sessionStorage.removeItem('jwt_token');
+    localStorage.removeItem('jwt_token');
     navigate("/registraion")
   }
 
@@ -29,7 +29,7 @@ export default function MaterialHeader() {
 
   return (
 
-    <MDBNavbar expand='lg' light className='user-color paper fixed-top'>
+    <MDBNavbar expand='lg' dark className='user-color paper fixed-top'>
       <MDBContainer fluid>
         <Link className="navbar-brand img-fluid" to="/"><img src="./assets/login.png" alt="" />
         </Link>
@@ -45,7 +45,7 @@ export default function MaterialHeader() {
         <MDBCollapse navbar show={showNav}>
           <MDBNavbarNav>
             {
-              sessionStorage.getItem('jwt_token') ?
+              localStorage.getItem('jwt_token') ?
                 <>
 
                   <MDBNavbarItem>
@@ -70,13 +70,13 @@ export default function MaterialHeader() {
                 </>
             }
           </MDBNavbarNav>
-          {sessionStorage.getItem('jwt_token') ?
+          {localStorage.getItem('jwt_token') ?
             <div class="dropdown">
               <button class="btn dropdown-toggle user-login-color" id="user-details-on-header" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Welcome: {username.firstname} {username.lastname}
+              {useremail}
               </button>
               <ul class="dropdown-menu">
-                <li><Link class="dropdown-item user-logout" to="/" onClick={logout}>Logout</Link></li>
+                <li><a class="dropdown-item user-logout" href="/" onClick={logout}>Logout</a></li>
               </ul>
             </div>
             : null

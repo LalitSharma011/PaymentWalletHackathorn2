@@ -46,7 +46,7 @@ export default function MDLogin() {
   };
 
   const [open, setOpen] = React.useState(false);   //added for snackbar
-  const handleClick = () => { }
+  const handleClick = () => {}
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return;
@@ -62,7 +62,7 @@ export default function MDLogin() {
     },
     onSubmit: values => {
       console.log("submit");
-      fetch("http://localhost:9000/auth/login", {
+      fetch("http://localhost:8765/api/v1/users/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -71,20 +71,18 @@ export default function MDLogin() {
       })
         .then(res => res.json())
         .then(data => {
-          console.log(data);
-          console.log(data.access_token);
-
+          console.log(data);         
           if (data.status === 200) {
-            sessionStorage.setItem("jwt_token", data.access_token)  //use session storage to remove token on closure of browser
-            sessionStorage.setItem("userName", JSON.stringify(data.userData)) //to get data of user in the state, we can now print user details when they log in
-            navigate("/products")
-
-          }
-          else {
-            setOpen(true);
-          }
-        })
-    },
+            localStorage.setItem("jwt_token", data.jwt_token)  //use local storage to remove token on closure of browser
+            localStorage.setItem("userName", data.email) //to get data of user in the state, we can now print user details when they log in
+            
+            navigate("/products") 
+            }   
+          })
+       .catch((error)=>{
+        setOpen(true);
+    });
+      },
     validationSchema: yup.object().shape({
       email: yup.string()
         .email("Invalid email address")

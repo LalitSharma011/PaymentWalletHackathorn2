@@ -105,33 +105,26 @@ export default function SignUp() {
       confirmpassword: ""
     },
     onSubmit: values => {
-      // console.log(values);
-      fetch("http://localhost:9000/auth/register", {
-        method: 'POST',
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(values)
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log(data)
-          console.log(data.message)
-          // 3 for snackbar
-          if (data.status === 200) {
-            navigate("/")
-            // alert("You have Successfully registered")
-          }
-          else {
-            setOpen(true)
-          }
+      fetch("http://localhost:8765/api/v1/users/register", {
+       method: 'POST',
+       headers: {
+         "Content-Type": "application/json"
+       },
+       body: JSON.stringify(values)
+     })
+       .then(res => res.json())
+       .then(data => {
+         console.log(data)
+         console.log(data.message)
+       // 3 for snackbar
+     if (data.userId) {
+       navigate("/")           
+       }       
+       })
+       .catch((e) => {console.log("Catch block executed")
+       setOpen(true)})
 
-        })
-        .catch((e) => console.log("Catch block executed"))
-        .finally(console.log("Finally executed"))
-
-
-    },
+   },
     validationSchema: yup.object().shape({
       firstname: yup.string()
         .min(3, "First name is too short")

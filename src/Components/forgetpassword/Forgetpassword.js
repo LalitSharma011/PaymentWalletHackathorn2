@@ -70,7 +70,7 @@ export default function Forgetpassword() {
                     .catch(err => console.error(err))
             }
             else {
-                document.getElementById("msg").innerHTML = "password and Confirm Password not Matched";
+                document.getElementById("msg").innerHTML = "Password and Confirm Password not Matched";
             }
         }
     }

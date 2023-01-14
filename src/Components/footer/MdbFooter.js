@@ -17,9 +17,9 @@ export default function MdbFooter() {
   const navigate = useNavigate();
   function logout() {
     navigate("/")
-    sessionStorage.removeItem('jwt_token');
+    localStorage.removeItem('jwt_token');
   }
-  if (sessionStorage.getItem('jwt_token')) {
+  if (localStorage.getItem('jwt_token')) {
     setTimeout(logout, 60000);
   }
 
@@ -92,7 +92,7 @@ export default function MdbFooter() {
       <div className='text-center p-3' style={{ backgroundColor: '#271745' }}>
         © 2022 Copyright: 
         <a className='text-white' href='#'> Lalit Sharma
-        {sessionStorage.getItem('jwt_token') ?
+        {localStorage.getItem('jwt_token') ?
             <Timer1/>
             :null
           }
