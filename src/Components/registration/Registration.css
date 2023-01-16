@@ -24,3 +24,8 @@
 .user-card{
     margin-top: 30vh!important;
 }
+.paper{
+    padding: 1em;
+    background-color: white;
+    box-shadow: 5px 5px 20px #271745!important;
+}
