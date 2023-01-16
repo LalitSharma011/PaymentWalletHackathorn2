@@ -41,7 +41,7 @@ export default function MediaCard1() {
 
         <div className="col-12 col-md-6 col-lg-4 ho mt-3">
           <MDBCard alignment='center' className='paper'>
-            <MDBCardImage src='/assets/service2.jpg' className='user-height' position='top' alt='...' />
+            <MDBCardImage src='/assets/services2.jpg' className='user-height' position='top' alt='...' />
             <MDBCardBody>
               <MDBCardTitle>Buy Movie Tickets</MDBCardTitle>
               <MDBCardText>

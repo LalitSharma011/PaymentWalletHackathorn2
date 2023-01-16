@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 const Timer1 = () => {
 
     const [seconds, setSeconds] = useState(0);
-    const [minutes, setMinutes] = useState(1);
+    const [minutes, setMinutes] = useState(2);
 
     var timer;
     useEffect(()=>{

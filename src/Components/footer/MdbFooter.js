@@ -20,7 +20,7 @@ export default function MdbFooter() {
     localStorage.removeItem('jwt_token');
   }
   if (localStorage.getItem('jwt_token')) {
-    setTimeout(logout, 60000);
+    setTimeout(logout, 122000);
   }
 
 

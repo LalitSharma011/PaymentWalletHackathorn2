@@ -7,12 +7,12 @@ import { CardActionArea } from '@mui/material';
 
 export default function ActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 600 }}>
-      <CardActionArea className='rounded-circle'>
+    <Card sx={{ maxWidth: 700 }}>
+      <CardActionArea>
         <CardMedia
           component="img"
           height="500"
-          image="/assets/login2.png"
+          image="/assets/diamond.jpg"
           alt="green iguana"
         />
         <CardContent>

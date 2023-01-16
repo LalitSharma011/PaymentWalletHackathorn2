@@ -109,7 +109,7 @@ export default function MDLogin() {
 
 
         <div className="col-12 col-md-6 paper">
-          <h1 className='user-login-text'>Login here</h1>
+          <h1 className='user-login-text'>Login Here</h1>
           <form onSubmit={formik.handleSubmit}>
             <MDBInput onChange={formik.handleChange} onBlur={formik.blur}
               value={formik.values.email} label='Enter your Email' id='email' type='text' onCopy={handleChange}
@@ -123,9 +123,9 @@ export default function MDLogin() {
             <br />
             <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' className='usercheckbox' label='Show Password' onClick={myFunction} onCopy={handleChange}
               onPaste={handleChange} />
-            <Link href="/forgetpassword" variant="body2">
+            {/* <Link href="/forgetpassword" variant="body2">
               Forgot password?
-            </Link>
+            </Link> */}
             <br />
             <br />
             <h6>Don't have an account? <Link href="/registration" variant="body2">
